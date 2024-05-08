@@ -1,6 +1,6 @@
 # Aguila o Sol
 App para tirar una moneda de 10 pesos y determinar si es Sol a Aguila 
-[alt text](assets/images/moneda.gif)
+[Moneda 10 pesos](assets/images/moneda-0.png)
 
 ## Getting Started
 
