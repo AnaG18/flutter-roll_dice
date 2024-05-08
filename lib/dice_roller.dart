@@ -20,7 +20,7 @@ class _DiceRollerState extends State<DiceRoller> {
 
   void rollDice() {
     setState(() {
-      currentDiceRoll = randomizer.nextInt(6) + 1; // Value between 1 and 6
+      currentDiceRoll = randomizer.nextInt(2); // Value between 1 and 6
     });
     // print('Changing image...');
   }
@@ -35,20 +35,40 @@ class _DiceRollerState extends State<DiceRoller> {
               width: 200,
             ),
             const SizedBox(height: 20),
-            TextButton(
-                // onPressed: () {}),
-                onPressed: rollDice,
-                style: TextButton.styleFrom(
-                  // padding: const EdgeInsets.only(top: 20,),
-                  foregroundColor: Colors.white,
-                  textStyle: const TextStyle(
-                    fontSize: 28,
+            const SizedBox(height: 30),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(4),
+            child: Stack(
+              children: <Widget>[
+                Positioned.fill(
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: <Color>[
+                          Color(0xFF0D47A1),
+                          Color(0xFF1976D2),
+                          Color(0xFF42A5F5),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
-                child: const Text(
+                TextButton(
+                  onPressed: rollDice,
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.all(16.0),
+                    textStyle: const TextStyle(
+                    fontSize: 28,),
+                    ),
+                  child: const Text(
                   'Roll Dice',
                   style: TextStyle(color: Colors.white),
-                ))
+                )
+                ),
+              ],
+            ),
+          ),
           ],
         );
   }

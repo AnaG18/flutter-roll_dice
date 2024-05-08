@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:custom_app_test/gradient_container.dart';
+import 'package:roll_dice/gradient_container.dart';
 
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
       body: GradientContainer(
-          [Color.fromARGB(255, 1, 57, 102), Color.fromARGB(255, 1, 114, 206)]),
+          [Colors.cyan.shade200,Colors.cyan.shade100, Colors.cyan.shade50]),
     ),
   ));
 }
